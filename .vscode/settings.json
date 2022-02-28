@@ -1,0 +1,6 @@
+{
+  "window.zoomLevel": 0.3,
+  "code-runner.executorMap": {
+    "typescript": "npx ts-node --files --transpile-only",
+  }
+}
