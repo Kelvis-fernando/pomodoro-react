@@ -1,6 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
-export function useInterval<C extends CallableFunction>(callback: C, delay: number | null) {
+export function useInterval<C extends CallableFunction>(
+  callback: C,
+  delay: number | null,
+) {
   const savedCallBack = useRef<C>();
 
   // remember latest callback.
@@ -15,7 +18,7 @@ export function useInterval<C extends CallableFunction>(callback: C, delay: numb
     }
 
     if (delay !== null) {
-      let id = setInterval(tick, delay);
+      const id = setInterval(tick, delay);
       return () => clearInterval(id);
     }
   }, [delay]);
